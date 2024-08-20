@@ -8,7 +8,17 @@ setup(
     description="Packages for building topic classifiers and testing them against datasets",
     author="Brendan & Jenn",
     author_email="brendan.homnick@gmail.com",
-    install_requires=["scikit-learn"],
-    extras_require={"test": ["black", "flake8", "isort", "pylint", "pytest"]},
+    install_requires=["click", "datasets", "scikit-learn"],
+    extras_require={
+        "test": [
+            "black",
+            "flake8",
+            "isort",
+            "pylint",
+            "pytest",
+            "pytest-integration",
+        ]
+    },
     packages=find_packages(exclude=["tests"]),
+    entry_points={"console_scripts": ["tcp=pipeline.main:evaluate"]},
 )

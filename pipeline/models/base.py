@@ -12,15 +12,10 @@ class BaseModel(ABC):
     def predict(self, X):
         pass
 
-    @abstractmethod
-    def serialize(self):
-        pass
-
-    @classmethod
-    def deserialize(cls, bytes):
-        pass
-
     def evaluate(self, X, y):
         y_pred = self.predict(X)
 
-        return {"accuracy": accuracy_score(y, y_pred), "balanced_accuracy": balanced_accuracy_score(y, y_pred)}
+        return {
+            "accuracy": accuracy_score(y, y_pred),
+            "balanced_accuracy": balanced_accuracy_score(y, y_pred),
+        }
