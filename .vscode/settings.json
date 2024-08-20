@@ -7,4 +7,5 @@
         },
      },
      "isort.args":["--profile", "black"],
+     "python.testing.cwd": "${workspaceFolder}/tests"
 }
