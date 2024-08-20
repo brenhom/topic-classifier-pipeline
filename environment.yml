@@ -1,0 +1,7 @@
+name: topic-classifier
+channels:
+  - defaults
+dependencies:
+  - pip
+  - python=3.12.4
+prefix: /opt/conda/envs/topic-classifier
